@@ -23,8 +23,8 @@ class CreateShippersTable extends Migration
             $table->string('address_line2')->nullable();
             $table->string('address_line3')->nullable();
             $table->string('phone', 12)->unique();
-            // $table->string('counties'); //TODO: manually create these as arrays in the db
-            // $table->string('towns');
+            $table->string('counties'); //TODO: manually create these as arrays in the db
+            $table->string('towns');
             $table->boolean('category_a')->nullable();
             $table->boolean('category_b')->nullable();
             $table->boolean('category_c')->nullable();

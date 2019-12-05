@@ -20,7 +20,7 @@ class Customer extends Authenticatable
      */
 
     protected $fillable = [
-        'first_name', 'middle_name', 'last_name', 'email', 'password', 'address_line1', 'address_line2', 'address_line3', 'phone', 'residence', 'photo', 'facebook_url', 'twitter_url', 'instagram_url', 'whatsapp', 'pinterest_url', 'sex'
+        'first_name', 'middle_name', 'last_name', 'email', 'password', 'address_line1', 'address_line2', 'address_line3', 'phone', 'county', 'town', 'photo', 'facebook_url', 'twitter_url', 'instagram_url', 'whatsapp', 'pinterest_url', 'sex'
     ];
 
     /**

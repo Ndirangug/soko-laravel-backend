@@ -33,6 +33,9 @@ class Package extends Model
     */
    protected $casts = [
        'rating' => 'int',
+       'time_received' => 'datetime',
+       'source' => 'array',
+       'destination' => 'array',
    ];
 
    public function packageMovements()

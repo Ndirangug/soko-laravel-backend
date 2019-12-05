@@ -20,7 +20,7 @@ class Driver extends Authenticatable
      */
 
     protected $fillable = [
-        'first_name', 'middle_name', 'last_name', 'email', 'password', 'address_line1', 'address_line2', 'address_line3', 'phone', 'residence', 'photo', 'facebook_url', 'twitter_url', 'instagram_url', 'whatsapp', 'pinterest_url', 'sex', 'national_id_number', 'vehicle_reg_number', 'vehicle_class', 'vehicle_description', 'vehicle_photo', 'shipperID'
+        'first_name', 'middle_name', 'last_name', 'email', 'national_id', 'password', 'sex', 'phone', 'county', 'town', 'photo', 'whatsapp', 'vehicle_reg_number', 'vehicle_type', 'vehicle_description', 'vehicle_photo', 'shipperID'
     ];
 
     /**

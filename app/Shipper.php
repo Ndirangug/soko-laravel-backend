@@ -20,7 +20,7 @@ class Shipper extends Authenticatable
      */
 
     protected $fillable = [
-        'shipper_name', 'phone', 'email', 'password', 'address_line1', 'address_line2', 'address_line3', 'category_a', 'category_b', 'category_c'
+        'shipper_name', 'phone', 'email', 'password', 'address_line1', 'address_line2', 'address_line3', 'counties', 'towns', 'category_a', 'category_b', 'category_c'
     ];
 
     /**

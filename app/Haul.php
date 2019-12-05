@@ -26,6 +26,18 @@ class Haul extends Model
     */
    protected $guarded = [];
 
+   /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'pickup' => 'array',
+        'destination' => 'array',
+        'begin_time' => 'datetime',
+        'end_time' => 'datetime',
+    ];
+
    public function packageMovements()
    {
        return $this->hasMany(PackageMovement::class);

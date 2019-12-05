@@ -14,8 +14,18 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
+            $table->id('orderID');
+            $table->double('amount_to_pay');
+            $table->boolean('is_paid');
+            $table->double('outstanding_amount');
+            $table->bigInteger('customerID');
             $table->timestamps();
+            $table->foreign('customerID')
+                ->references('customerID')
+                ->on('customers')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+
         });
     }
 

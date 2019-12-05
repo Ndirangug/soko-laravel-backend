@@ -14,8 +14,20 @@ class CreatePackageMovementsTable extends Migration
     public function up()
     {
         Schema::create('package_movements', function (Blueprint $table) {
-            $table->id();
+            $table->id('package_movementID');
+            $table->bigInteger('packageID');
+            $table->bigInteger('haulID');
             $table->timestamps();
+            $table->foreign('packageID')
+                ->references('packageID')
+                ->on('packages')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+            $table->foreign('haulID')
+                ->references('haulID')
+                ->on('hauls')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
         });
     }
 

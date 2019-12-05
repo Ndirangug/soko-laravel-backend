@@ -51,6 +51,16 @@ class Customer extends Authenticatable
     // Relationships
     public function orders()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Order::class, 'customerID');
+    }
+
+    public function orderItems()
+    {
+        return $this->hasManyThrough(OrderItem::class, Order::class, 'customerID', 'orderID');
+    }
+
+    public function payments()
+    {
+        return $this->hasManyThrough(Payment::class, Order::class, 'customerID', 'orderID');
     }
 }

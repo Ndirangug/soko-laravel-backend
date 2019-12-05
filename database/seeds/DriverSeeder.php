@@ -1,5 +1,6 @@
 <?php
 
+use App\Driver;
 use Illuminate\Database\Seeder;
 
 class DriverSeeder extends Seeder
@@ -11,6 +12,6 @@ class DriverSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Driver::class, 100)->create();
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Haul;
 use Illuminate\Database\Seeder;
 
 class HaulSeeder extends Seeder
@@ -11,6 +12,6 @@ class HaulSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Haul::class, 100)->create();
     }
 }

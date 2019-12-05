@@ -1,5 +1,6 @@
 <?php
 
+use App\PackageMovement;
 use Illuminate\Database\Seeder;
 
 class PackageMovementSeeder extends Seeder
@@ -11,6 +12,6 @@ class PackageMovementSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(PackageMovement::class, 100)->create();
     }
 }

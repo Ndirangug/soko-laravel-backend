@@ -15,8 +15,9 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id('paymentID');
-            $table->integer('amount');
+            $table->double('amount');
             $table->string('paid_by');
+            $table->string('transaction_code');
             $table->enum('mode_of_payment', ['mpesa', 'bank', 'cash', 'bonga', 'visa', 'mastercard', 'airtel_money', 'tkash', 'wallet']);
             $table->bigInteger('orderID');
             $table->timestamps();
@@ -25,7 +26,6 @@ class CreatePaymentsTable extends Migration
                 ->on('orders')
                 ->onDelete('restrict')
                 ->onUpdate('cascade');
-
         });
     }
 

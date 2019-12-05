@@ -15,7 +15,7 @@ class CreateOrderItemsTable extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->id('order_itemID');
-            $table->integer('price');
+            $table->double('price');
             $table->integer('rating')->default(0);
             $table->string('review', 1000)->nullable();
             $table->enum('order_status', ['pending', 'waiting to fulfil', 'waiting to ship', 'shipping', 'delivered', 'cancelled', 'returned', 'complete']);

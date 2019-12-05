@@ -46,6 +46,7 @@ class Driver extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'shipperID' => 'int',
     ];
 
     public function hauls()

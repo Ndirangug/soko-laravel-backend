@@ -16,7 +16,7 @@ class Payment extends Model
      */
 
     protected $fillable = [
-        'amount', 'paid_by', 'mode_of_payment', 'orderID'
+        'amount', 'paid_by', 'transaction_code', 'mode_of_payment', 'orderID'
     ];
 
     /**
@@ -34,6 +34,7 @@ class Payment extends Model
      * @var array
      */
     protected $casts = [
-        'amount' => 'double'
+        'amount' => 'double',
+        'orderID' => 'int'
     ];
 }

@@ -20,7 +20,7 @@ class Seller extends Authenticatable
      */
 
     protected $fillable = [
-        'seller_name', 'email', 'profile_description', 'phone', 'address', 'password', 'address_line1', 'address_line2', 'address_line3', 'county', 'town', 'photo', 'facebook_url', 'twitter_url', 'instagram_url', 'whatsapp', 'pinterest_url'
+        'seller_name', 'email', 'profile_description', 'phone', 'password', 'address_line1', 'address_line2', 'address_line3', 'county', 'town', 'photo', 'facebook_url', 'twitter_url', 'instagram_url', 'whatsapp', 'pinterest_url'
     ];
 
     /**

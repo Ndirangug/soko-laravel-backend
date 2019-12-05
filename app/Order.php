@@ -37,15 +37,16 @@ class Order extends Model
         'amount_to_pay' => 'double',
         'outstanding_amount' => 'double',
         'is_paid' => 'bool',
+        'customerID' => 'int',
     ];
 
     public function payments()
     {
-        return $this->hasMany(Payment::class);
+        return $this->hasMany(Payment::class, 'orderID');
     }
 
     public function orderItems()
-     {
-         return $this->hasMany(OrderItem::class);
-     }
+    {
+        return $this->hasMany(OrderItem::class, 'orderID');
+    }
 }

@@ -34,5 +34,8 @@ class OrderItem extends Model
     protected $casts = [
         'rating' => 'int',
         'price' => 'double',
+        'productID' => 'int',
+        'orderID' => 'int',
+        'packageID' => 'int'
     ];
 }

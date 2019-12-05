@@ -39,6 +39,7 @@ class Product extends Model
          'variation' => 'array',
          'offer_type' => 'array',
          'offer_amount' => 'double',
+         'sellerID' => 'int',
      ];
 
      public function orderItems()

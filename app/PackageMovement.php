@@ -38,6 +38,9 @@ class PackageMovement extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'packageID' => 'int',
+        'haulID'  => 'int'
+    ];
 
 }

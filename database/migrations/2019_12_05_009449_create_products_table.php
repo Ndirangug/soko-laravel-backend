@@ -30,7 +30,7 @@ class CreateProductsTable extends Migration
             $table->json('variation')->nullable();
             $table->json('offer_type')->nullable(); // percentage or real value
             $table->double('offer_amount')->nullable();
-            $table->string('shipping_from'); //local inhouse or abroad
+            $table->enum('shipping_from', ['local', 'inhouse', 'abroad']); //local inhouse or abroad
             $table->string('brand')->default('generic');
             $table->bigInteger('sellerID');
             $table->timestamps();
